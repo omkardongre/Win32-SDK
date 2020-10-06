@@ -1,4 +1,4 @@
-
+//Win32 SDK
 
 #include<windows.h>
 #include<iostream>
@@ -75,9 +75,25 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT iMsg, WPARAM wParam, LPARAM lParam)
 		MessageBox(hwnd, TEXT("Window created"), TEXT("Message"), MB_OK);
 		break;
 
+
+	case WM_KEYDOWN:
+		MessageBox(hwnd, TEXT("key is pressed"), TEXT("Message"), MB_OK);
+		break;
+
+	case WM_LBUTTONDOWN:
+		MessageBox(hwnd, TEXT("left button pressed"), TEXT("Message"), MB_OK);
+		break;
+
+	case WM_RBUTTONDOWN:
+		MessageBox(hwnd, TEXT("right button pressed"), TEXT("Message"), MB_OK);
+		break;
+
+
 	case WM_DESTROY:
 		PostQuitMessage(0);
 		break;
+
+
 
 	}
 
